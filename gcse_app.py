@@ -8,8 +8,8 @@ Created on Tue Aug  1 11:57:48 2017
 from flask import Flask, request, render_template, jsonify #, redirect, url_for
 import numpy as np
 import pandas as pd
-from sklearn import cross_validation
-from sklearn.naive_bayes import GaussianNB
+#from sklearn import cross_validation
+#from sklearn.naive_bayes import GaussianNB
 from sklearn.externals import joblib
 #import psycopg2
 
