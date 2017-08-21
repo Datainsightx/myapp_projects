@@ -1,5 +1,4 @@
 flask==0.12
-Flask==0.12.2
 gunicorn==19.7.1
 itsdangerous==0.24
 Jinja2==2.9.6
@@ -12,3 +11,4 @@ Werkzeug==0.12.2
 joblib==0.9.4
 pandas==0.17.1
 requests==2.11.1
+
