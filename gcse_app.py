@@ -13,18 +13,18 @@ import pandas as pd
 from sklearn.externals import joblib
 #import psycopg2
 
-app2 = Flask(__name__)
+app = Flask(__name__)
 
-@app2.route('/')
+@app.route('/')
 def upload_data():
     return render_template('uploaddata.html')
 
-@app2.route('/home') #retrieve uploaded file and let user select features
+@app.route('/home') #retrieve uploaded file and let user select features
 #for prediction from it
 def home():
     return render_template('home.html') 
   
-@app2.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
      json_ = request.json
      query_df = pd.DataFrame(json_)
@@ -33,6 +33,6 @@ def predict():
      return jsonify({'prediction': list(prediction)})
 if __name__ == '__main__':
      clf = joblib.load('webmodel.pkl')
-     app2.run( )
+     app.run( )
 
  
